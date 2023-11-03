@@ -9,7 +9,7 @@ function App() {
   const queryClient = new QueryClient();
   const sdk = useSpotify(
     import.meta.env.VITE_SPOTIFY_CLIENT_ID,
-    `https://${window.location.origin}${window.location.pathname}`,
+    `${window.location.origin}${window.location.pathname}`,
     Scopes.all
   );
 
