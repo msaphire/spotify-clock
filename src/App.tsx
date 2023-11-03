@@ -6,10 +6,11 @@ import { MainView } from './components/main-view';
 
 function App() {
   // Create a client
+  console.log(window.location.href);
   const queryClient = new QueryClient();
   const sdk = useSpotify(
     import.meta.env.VITE_SPOTIFY_CLIENT_ID,
-    import.meta.env.VITE_REDIRECT_TARGET,
+    window.location.href,
     Scopes.all
   );
 
